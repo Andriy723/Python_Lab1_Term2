@@ -1,5 +1,4 @@
 class Trolleybus:
-
     def __init__(self, route_number, current_stop, max_speed, capacity, passengers, current_speed, id = 100):
         self.id = id
         self.route_number = route_number
@@ -28,13 +27,3 @@ class Trolleybus:
         if self.passengers > self.capacity:
             self.passengers -= 1
         else: print("Trolleybus is not overcrowded! So, you can get into it.")
-
-trolleybus_1 = Trolleybus(44, 36, 122, 27, 3, 22)
-trolleybus_2 = Trolleybus(11, 22, 110, 44, 11, 22)
-
-trolleybus_1.add_passenger()
-trolleybus_2.stop()
-trolleybus_1.start()
-
-print("The object of Trolleybus class: trolleybus 1", trolleybus_1)
-print("The object of Trolleybus class: trolleybus 2", trolleybus_2)
