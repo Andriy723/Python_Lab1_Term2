@@ -12,18 +12,24 @@ class Trolleybus:
         return f"({self.route_number}, {self.current_stop}, {self.max_speed}, {self.capacity}, {self.passengers}," \
                f" {self.current_speed}, {self.id})"
 
-    def stop(self):
-        self.current_speed = 0
+# @staticmethod
+# def get_instance():
+#      if Trolleybus._default_trolleybus is None:
+#         Trolleybus._default_trolleybus = Trolleybus()
+#      return Trolleybus._default_trolleybus
 
-    def start(self):
-        self.current_speed = 20
+def stop(self):
+  self.current_speed = 0
 
-    def add_passenger(self):
-        if self.passengers < self.capacity:
-            self.passengers += 1
-        else: print("Trolleybus is overcrowded!")
+def start(self):
+ self.current_speed = 20
 
-    def remove_passenger(self):
-        if self.passengers > self.capacity:
-            self.passengers -= 1
-        else: print("Trolleybus is not overcrowded! So, you can get into it.")
+def add_passenger(self):
+    if self.passengers < self.capacity:
+      self.passengers += 1
+    else: print("Trolleybus is overcrowded!")
+
+def remove_passenger(self):
+  if self.passengers > self.capacity:
+       self.passengers -= 1
+  else: print("Trolleybus is not overcrowded! So, you can get into it.")
