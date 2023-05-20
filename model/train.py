@@ -11,16 +11,15 @@ class Train(Transport):
     """
     # pylint: disable = too-many-arguments
     def __init__(self, max_load_on_train=None, name=None, speed_of_train=None,
-                 max_speed=None, id_transport=None, colour=None):
+                 max_speed=None, id_transport=None):
         self.max_load_on_train = max_load_on_train
         self.name = name
         self.speed_of_train = speed_of_train
-        super().__init__(max_speed, id_transport, colour)
+        super().__init__(max_speed, id_transport)
 
     def __str__(self):
         return f"Train({self.max_load_on_train}, {self.name}, " \
-               f"{self.speed_of_train}, {self.max_speed}, {self.id_transport}, " \
-               f"{self.colour})"
+               f"{self.speed_of_train}, {self.max_speed}, {self.id_transport})"
 
     def accelerate(self):
         """

@@ -14,8 +14,7 @@ class Trolleybus(Transport):
     # pylint: disable = too-many-arguments
     def __init__(self, route_number=None, current_stop=None,
                  max_speed_of_trolleybus=None, capacity=None, passengers=None,
-                 current_speed=None, max_speed=None, id_transport=None,
-                 colour=None, id_trolleybus=100):
+                 current_speed=None, max_speed=None, id_transport=None, id_trolleybus=100):
         self.route_number = route_number
         self.current_stop = current_stop
         self.max_speed_of_trolleybus = max_speed_of_trolleybus
@@ -23,14 +22,13 @@ class Trolleybus(Transport):
         self.passengers = passengers
         self.current_speed = current_speed
         self.id_trolleybus = id_trolleybus
-        super().__init__(max_speed, id_transport, colour)
+        super().__init__(max_speed, id_transport)
 
     def __str__(self):
         return f"Trolleybus({self.route_number}, {self.current_stop}, " \
                f"{self.max_speed_of_trolleybus}, {self.capacity}, " \
                f"{self.passengers}, {self.current_speed}, " \
-               f"{self.id_trolleybus}, {self.max_speed}, {self.id_transport}, " \
-               f"{self.colour})"
+               f"{self.id_trolleybus}, {self.max_speed}, {self.id_transport})"
 
     @staticmethod
     def get_instance():

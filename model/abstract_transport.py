@@ -9,13 +9,10 @@ class Transport(ABC):
     Abstract class transport that have an abstract method accelerate
     Also that class is a parent one
     """
-    max_speed1 = 450
-    colour = "Green"
 
-    def __init__(self, max_speed=None, colour=None, id_transport=0):
+    def __init__(self, max_speed=None, id_transport=0):
         self.max_speed = max_speed
         self.id_transport = id_transport
-        self.colour = colour
         super().__init__()
 
     @abstractmethod
