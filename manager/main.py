@@ -16,7 +16,7 @@ class TransportManager:
     Manager class
     """
     transports = [
-        Train(4, 6, 2, 7, 3),
+        Train(4, 6, 2),
 ]
 
     def add_transport(self, transport):
@@ -52,20 +52,20 @@ class TransportManager:
         main func
         :return:
         """
-        self.transports.append(Car(4, 4, 4, 4, 4, 4))
+        self.transports.append(Car(4, 4, 4, 4))
 
         transport_manager = TransportManager()
 
-        transport_manager.add_transport(Trolleybus(4, 4, 4, 4, 4, 4, 4, 4, 4))
-        transport_manager.add_transport(Plane(300, 300, 300, 300, 300))
+        transport_manager.add_transport(Trolleybus(4, 4, 4, 4, 4, 4, 4))
+        transport_manager.add_transport(Plane(300, 300, 300))
 
         for transportsss in self.transports:
             print(transportsss)
 
-        t = transport_manager.find_transport_with_speed_bigger_than(39)
+        t = transport_manager.find_transport_with_speed_bigger_than(9)
         if t is not None:
             for x in t:
-                print(x, "\n")
+                print(x)
 
 if __name__ == '__main__':
     TransportManager().main()

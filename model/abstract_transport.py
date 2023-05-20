@@ -10,9 +10,10 @@ class Transport(ABC):
     Also that class is a parent one
     """
 
-    def __init__(self, max_speed=None, id_transport=None):
+    def __init__(self, max_speed=None, id_transport=0):
         self.max_speed = max_speed
         self.id_transport = id_transport
+        super().__init__()
 
     @abstractmethod
     def accelerate(self):
