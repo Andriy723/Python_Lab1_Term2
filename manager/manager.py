@@ -19,12 +19,11 @@ class TransportManager:
         """
         Method that will be searching the value I work with in objects I have created
         """
-        print("Object with speed is found:",
-              *[transport for transport in self.transports if transport.max_speed > speed])
+        return filter(lambda transport: transport.max_speed > speed, self.transports)
 
     def find_all_objects_with_same_id(self, id_transport):
         """
         Method that will be searching object with the same id as current
         """
-        print("Object with id is found:",
-              *[transport for transport in self.transports if transport.id_transport == id_transport])
+        return filter(lambda transport: transport.id_transport is id_transport,
+                              self.transports)

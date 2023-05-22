@@ -1,8 +1,7 @@
 """
 Class that have many values and methods
 """
-# pylint: disable = import-error
-from model.abstract_transport import Transport
+from Python_Lab1_Term2.model.abstract_transport import Transport
 
 
 class Trolleybus(Transport):
@@ -15,6 +14,9 @@ class Trolleybus(Transport):
     def __init__(self, route_number=None, current_stop=None,
                  max_speed_of_trolleybus=None, capacity=None, passengers=None,
                  current_speed=None, max_speed=None, id_transport=None, id_trolleybus=100):
+        """
+        Constructor
+        """
         self.route_number = route_number
         self.current_stop = current_stop
         self.max_speed_of_trolleybus = max_speed_of_trolleybus
@@ -25,6 +27,9 @@ class Trolleybus(Transport):
         super().__init__(max_speed, id_transport)
 
     def __str__(self):
+        """
+        Method that return String of values
+        """
         return f"Trolleybus({self.route_number}, {self.current_stop}, " \
                f"{self.max_speed_of_trolleybus}, {self.capacity}, " \
                f"{self.passengers}, {self.current_speed}, " \
