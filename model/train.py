@@ -1,6 +1,7 @@
 """
 Creator: Plish Andriy
 """
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
 from Python_Lab1_Term2.model.abstract_transport import Transport
 
 
@@ -17,6 +18,7 @@ class Train(Transport):
         self.max_load_on_train = max_load_on_train
         self.name = name
         self.speed_of_train = speed_of_train
+        self.mark = {"Sfud", "Rito"}
         super().__init__(max_speed, id_transport)
 
     def __str__(self):
@@ -31,3 +33,9 @@ class Train(Transport):
         parent method that are redefined here
         """
         return self.speed_of_train
+
+    def do_something(self):
+        """
+        :return: transports
+        """
+        return [x for x in TransportManager.transports]
