@@ -1,9 +1,10 @@
 """
-Class that have many values and methods
+Plish Andriy, lab 9
 """
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
 from Python_Lab1_Term2.model.abstract_transport import Transport
 
-
+# pylint: disable = too-many-instance-attributes
 class Trolleybus(Transport):
     """
     Class that have many values and methods
@@ -24,6 +25,7 @@ class Trolleybus(Transport):
         self.passengers = passengers
         self.current_speed = current_speed
         self.id_trolleybus = id_trolleybus
+        self.mark = {"Reno", "Volkswagen"}
         super().__init__(max_speed, id_transport)
 
     def __str__(self):
@@ -33,7 +35,7 @@ class Trolleybus(Transport):
         return f"Trolleybus({self.route_number}, {self.current_stop}, " \
                f"{self.max_speed_of_trolleybus}, {self.capacity}, " \
                f"{self.passengers}, {self.current_speed}, " \
-               f"{self.id_trolleybus}, {self.max_speed}, {self.id_transport})"
+               f"{self.id_trolleybus}, {self.max_speed}, {self.id_transport})\n"
 
     @staticmethod
     def get_instance():
@@ -92,3 +94,9 @@ class Trolleybus(Transport):
         parent method
         """
         return self.current_speed
+
+    def do_something(self):
+        """
+        :return: transports
+        """
+        return [x for x in TransportManager.transports]

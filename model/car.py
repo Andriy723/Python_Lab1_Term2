@@ -1,6 +1,7 @@
 """
 Lab 2 in python | Plish Andriy
 """
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
 from Python_Lab1_Term2.model.abstract_transport import Transport
 
 
@@ -19,6 +20,7 @@ class Car(Transport):
         self.volume = volume
         self.max_load = max_load
         self.speed_of_car = speed_of_car
+        self.mark = {"Nissan", "Skoda"}
         super().__init__(max_speed, id_transport)
 
     def __str__(self):
@@ -34,3 +36,9 @@ class Car(Transport):
         parent method
         """
         return self.speed_of_car
+
+    def do_something(self):
+        """
+        :return: transports
+        """
+        return [x for x in TransportManager.transports]
