@@ -39,3 +39,14 @@ class Plane(Transport):
         :return: transports
         """
         return [x for x in TransportManager.transports]
+
+    def dictionary(self, value_type=None):
+        """
+        Method that output values in dictionary with current type
+        There are keys and values
+        If the value != type we use then this value won't be added to list we print
+        """
+        if value_type is not None:
+            transport_dict = {key: value for key, value in self.__dict__.items()
+                           if isinstance(value, value_type)}
+            print(transport_dict)

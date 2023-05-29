@@ -2,7 +2,8 @@
 Lab 9 Term 2 python
 """
 from Python_Lab1_Term2.manager.transport_manager import TransportManager
-
+from Python_Lab1_Term2.decorator.log_out_in_values import log_output_input
+from Python_Lab1_Term2.decorator.output_iter_obj import length_logger_decorator
 
 class SetManager:
     """
@@ -27,7 +28,7 @@ class SetManager:
         Method that return iterator
         """
         for transport in self.regular_manager.transports:
-            yield from transport.mark
+            yield transport
 
     def __next__(self):
         """
@@ -45,10 +46,15 @@ class SetManager:
         Method that returns object on current index
         """
         for transports in self.regular_manager:
-            return transports[index].pattern
+            return transports[index].mark
 
+    @log_output_input
+    @length_logger_decorator
     def __len__(self):
+        """
+        :return: length
+        """
         length = 0
         for transports in self.regular_manager:
-            length += len(transports.mark)
+            length += 1
         return length

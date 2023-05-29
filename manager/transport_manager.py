@@ -63,6 +63,7 @@ class TransportManager:
         Method that returns any of the current true variable
         """
         any_a = any(transport.max_speed == value for transport in self.transports)
+        print(any_a)
         return any_a
 
     def all_func(self, value):
