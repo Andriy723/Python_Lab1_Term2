@@ -2,7 +2,9 @@
 Lab 2 python term 2
 """
 from abc import abstractmethod, ABC
-from Python_Lab1_Term2.manager.transport_manager import TransportManager
+from decorator.log_error_exception import logged
+from error.error import SpeedError
+from manager.transport_manager import TransportManager
 
 
 # pylint: disable = too-few-public-methods
@@ -58,3 +60,11 @@ class Transport(ABC):
         Iteration method
         """
         return iter(self.mark)
+
+    # Exception
+    @logged(SpeedError, "file")
+    def error(self):
+        if [self.max_speed for self in TransportManager.transports if self.max_speed > 200]:
+            raise SpeedError()
+        else:
+            print("Be careful! Good luck in a travel!")

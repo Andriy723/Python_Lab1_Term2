@@ -1,8 +1,8 @@
 """
 Creator: Plish Andriy
 """
-from Python_Lab1_Term2.manager.transport_manager import TransportManager
-from Python_Lab1_Term2.model.abstract_transport import Transport
+from manager.transport_manager import TransportManager
+from model.abstract_transport import Transport
 
 
 class Plane(Transport):
