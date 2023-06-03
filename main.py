@@ -1,11 +1,11 @@
 """
 Lab 2 Term 2 Python
 """
-from Python_Lab1_Term2.manager.set_manager import SetManager
-from Python_Lab1_Term2.model.abstract_transport import Transport
-from Python_Lab1_Term2.model.plane import Plane
-from Python_Lab1_Term2.model.trolleybus import Trolleybus
-from Python_Lab1_Term2.manager.transport_manager import TransportManager
+from manager.set_manager import SetManager
+from model.abstract_transport import Transport
+from model.plane import Plane
+from model.trolleybus import Trolleybus
+from manager.transport_manager import TransportManager
 
 
 def main():
@@ -14,8 +14,8 @@ def main():
     """
     transport_manager = TransportManager()
 
-    transport_manager.add_transport(Trolleybus(44, 44, 44, 44, 44,
-                                               44, 44, 44, 66))
+    transport_manager.add_transport(Trolleybus(440, 440, 440, 440, 440,
+                                               440, 440, 440, 660))
     transport_manager.add_transport(Plane(55, 55, 55, 55, 44))
 
     for transportsss in TransportManager.transports:
@@ -58,8 +58,11 @@ def main():
     set_manager = SetManager(transport_manager)
     print(len(set_manager))
 
-    plane = Plane(3, 3, 3, 3, 3)
+    plane = Plane(100, 3060, 300, 30, 30)
     plane.dictionary(int)
+
+    print("\n")
+    Transport.error(transport_manager)
 
 if __name__ == '__main__':
     main()
