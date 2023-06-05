@@ -1,8 +1,8 @@
 """
 Lab 2 in python | Plish Andriy
 """
-from manager.transport_manager import TransportManager
-from model.abstract_transport import Transport
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
+from Python_Lab1_Term2.model.abstract_transport import Transport
 
 
 class Car(Transport):

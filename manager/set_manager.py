@@ -1,9 +1,9 @@
 """
 Lab 9 Term 2 python
 """
-from manager.transport_manager import TransportManager
-from decorator.log_out_in_values import log_output_input
-from decorator.output_iter_obj import length_logger_decorator
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
+from Python_Lab1_Term2.decorator.log_out_in_values import log_output_input
+from Python_Lab1_Term2.decorator.output_iter_obj import length_logger_decorator
 
 
 class SetManager:

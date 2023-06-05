@@ -1,11 +1,11 @@
 """
 Lab 2 Term 2 Python
 """
-from manager.set_manager import SetManager
-from model.abstract_transport import Transport
-from model.plane import Plane
-from model.trolleybus import Trolleybus
-from manager.transport_manager import TransportManager
+from Python_Lab1_Term2.manager.set_manager import SetManager
+from Python_Lab1_Term2.model.abstract_transport import Transport
+from Python_Lab1_Term2.model.plane import Plane
+from Python_Lab1_Term2.model.trolleybus import Trolleybus
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
 
 
 def main():
@@ -63,6 +63,10 @@ def main():
 
     print("\n")
     Transport.error(transport_manager)
+
+    a = ["Immmm", "rllI", "uuuuI", "Iraaaaa"]
+    b = [x for x in a if x.startswith("I")]
+    print (b)
 
 if __name__ == '__main__':
     main()

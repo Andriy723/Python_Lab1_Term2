@@ -1,9 +1,8 @@
 """
 Plish Andriy, lab 9
 """
-from manager.transport_manager import TransportManager
-from model.abstract_transport import Transport
-from decorator.log_error_exception import logged
+from Python_Lab1_Term2.manager.transport_manager import TransportManager
+from Python_Lab1_Term2.model.abstract_transport import Transport
 
 
 # pylint: disable = too-many-instance-attributes
