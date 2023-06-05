@@ -14,8 +14,8 @@ def main():
     """
     transport_manager = TransportManager()
 
-    transport_manager.add_transport(Trolleybus(44, 44, 44, 44, 44,
-                                               44, 44, 44, 66))
+    transport_manager.add_transport(Trolleybus(440, 440, 440, 440, 440,
+                                               440, 440, 440, 660))
     transport_manager.add_transport(Plane(55, 55, 55, 55, 44))
 
     for transportsss in TransportManager.transports:
@@ -58,8 +58,15 @@ def main():
     set_manager = SetManager(transport_manager)
     print(len(set_manager))
 
-    plane = Plane(3, 3, 3, 3, 3)
+    plane = Plane(100, 3060, 300, 30, 30)
     plane.dictionary(int)
+
+    print("\n")
+    Transport.error(transport_manager)
+
+    a = ["Immmm", "rllI", "uuuuI", "Iraaaaa"]
+    b = [x for x in a if x.startswith("I")]
+    print (b)
 
 if __name__ == '__main__':
     main()

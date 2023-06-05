@@ -2,6 +2,8 @@
 Lab 2 python term 2
 """
 from abc import abstractmethod, ABC
+from Python_Lab1_Term2.decorator.log_error_exception import logged
+from Python_Lab1_Term2.error.error import SpeedError
 from Python_Lab1_Term2.manager.transport_manager import TransportManager
 
 
@@ -58,3 +60,11 @@ class Transport(ABC):
         Iteration method
         """
         return iter(self.mark)
+
+    # Exception
+    @logged(SpeedError, "file", "w")
+    def error(self):
+        if [self.max_speed for self in TransportManager.transports if self.max_speed > 200]:
+            raise SpeedError()
+        else:
+            print("Be careful! Good luck in a travel!")

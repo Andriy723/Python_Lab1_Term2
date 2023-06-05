@@ -4,6 +4,7 @@ Plish Andriy, lab 9
 from Python_Lab1_Term2.manager.transport_manager import TransportManager
 from Python_Lab1_Term2.model.abstract_transport import Transport
 
+
 # pylint: disable = too-many-instance-attributes
 class Trolleybus(Transport):
     """
@@ -62,10 +63,13 @@ class Trolleybus(Transport):
         """
         Add_passenger add one passenger to the object when capacity > passengers
         """
-        if self.passengers < self.capacity:
-            self.passengers += 1
-        else:
-            print("Trolleybus is overcrowded!")
+        try:
+            if self.passengers < self.capacity:
+                self.passengers += 1
+            else:
+                raise ValueError("Trolleybus is overcrowded!")
+        except ValueError as error:
+            print(error)
 
     def remove_passenger(self):
         """
